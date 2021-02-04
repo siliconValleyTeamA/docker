@@ -1,4 +1,4 @@
-# Pudding (docker)
+# Pudding (Docker)
 
 Global Project Funding Service
 
@@ -17,7 +17,7 @@ Global Project Funding Service
 
 ## 🐳Quick Start 
 
-# docker로 프로젝트 실행하기
+# Docker로 프로젝트 실행하기
 
 ### 1. Clone Packages
 ```bash
@@ -50,6 +50,20 @@ docker-compose up
 5. exit로 컨테이너 나온 후 다시 `docker-compose up`하면 정상 작동
 
 ---
+
+## Container
+- ![title](https://img.shields.io/badge/-React-61DAFB?&logo=React&logoColor=white)
+- ![title](https://img.shields.io/badge/-Node.js-339933?&logo=Node.js&logoColor=white)  ![title](https://img.shields.io/badge/-Express-000000?&logo=Express&logoColor=white) 
+- ![title](https://img.shields.io/badge/-Elasticsearch-F4BD19?&logo=Elasticsearch&logoColor=white)
+- ![title](https://img.shields.io/badge/-Logstash-02BFB3?&logo=Logstash&logoColor=white)
+- ![title](https://img.shields.io/badge/-Kibana-E9488C?&logo=Kibana&logoColor=white)
+- ![title](https://img.shields.io/badge/-MySQL-4479A1?&logo=MySQL&logoColor=white)
+
+--> 📁 client : https://github.com/siliconValleyTeamA/client   
+--> 📁 server : https://github.com/siliconValleyTeamA/server
+
+---
+
 ## 프로젝트 구조
 ```bash
 |-- docker
