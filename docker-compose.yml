@@ -1,23 +1,83 @@
-version: '3.8'
+version: "3.8"
 networks:
   app-tier:
     driver: bridge
+
 services:
+  # mysql container
+  mysql:
+    image: mariadb:10.5.8-focal
+    restart: always
+    volumes:
+      - ./mysql_data:/var/lib/mariadb/data/
+    env_file:
+      - ./settings/.env.db
+    ports:
+      - "3306:3306"
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+
+  # elasticsearch container
+  elasticsearch:
+    build: elasticsearch
+    restart: always
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+
+  # logstash container
+  logstash:
+    build: logstash
+    restart: always
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
+      - ./logstash/pipeline:/usr/share/logstash/pipeline
+    environment:
+      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+    depends_on:
+      - elasticsearch
+    env_file:
+      - ./settings/.env.logstash
+
+  # kibana container
+  kibana:
+    build: kibana
+    restart: always
+    volumes:
+      - ./kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+
+  # server container
   server:
     image: anwlro7958/fuding:server
     ports:
-      - '8080:8080'
+      - "8080:8080"
     volumes:
       - ./server:/app
     networks:
       - app-tier
     restart: always
+
+  # client container
   client:
     image: anwlro7958/fuding:client
     ports:
-      - '3000:3000'
+      - "3000:3000"
     volumes:
       - ./client:/app
     networks:
       - app-tier
     restart: always
+
+volumes:
+  mysql_data:
