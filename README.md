@@ -56,20 +56,36 @@ docker-compose up
       |
       |
       |--client 
-      |  ..//(siliconValleyTeamA/client에서 clone한 폴더)
+      |    |..//(siliconValleyTeamA/client에서 clone한 폴더)
       |
       |--server
       |  ..//(siliconValleyTeamA/server에서 clone한 폴더)
       |
       |--elasticsearch
-      |  ..// elasticsearch
+      |       |  ..// elasticsearch 관련 파일
+      |       |--Dockerfile
+      |       |--config
+      |            |
+      |            |--elasticsearch.yml
       |
       |--kibana
-      |  ..//kibana
+      |     |  ..//kibana 관련 파일
+      |     |--Dockerfile
+      |     |--config
+      |          |
+      |          |--kibana.yml
       |
       |--logstash
-      |  ..//logstash
-      |
+      |      |..//logstash 관련 파일
+      |      |--Dockerfile
+      |      |--mysql-connector-java-5.1.49.bin.jar
+      |      |-- config
+      |      |      |--logstash.yml
+      |      |      |--pipeline.yml
+      |      |      
+      |      |--pipeline
+      |      |      |--logstash.conf
+      |      |
       |--docker-compose.yml
       |  ..// 도커 설정파일
       |
