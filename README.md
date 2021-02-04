@@ -1,18 +1,45 @@
-# Global crowdfunding project with docker
+# Pudding (docker)
+
+Global Project Funding Service
 
 글로벌하게 프로젝트를 펀딩하는 Web Application 입니다. <br>
 사용자의 나라에 맞게 제품을 소개하는 레이아웃과 제품을 등록하는 레이아웃을 다르게 보여줍니다. <br>
 기존 펀딩 사이트와는 다르게 프로젝트를 펀딩한다는 점에서도 차별을 두었습니다.
 
+## ✋Team Members
+
+- [![title](https://img.shields.io/badge/DEVLOPER-최윤선-123456)](https://github.com/OMEGA-Y)
+- [![title](https://img.shields.io/badge/DEVLOPER-이연정-123456)](https://github.com/YeonJeongLee00)
+- [![title](https://img.shields.io/badge/DEVLOPER-유창헌-123456)](https://github.com/dbckdgjs369)
+- [![title](https://img.shields.io/badge/DEVLOPER-노기진-123456)](https://github.com/nohgijin)
+
+---
+
+## 🐳Quick Start 
+
 # docker로 프로젝트 실행하기
 
-#### 1. docker-compose.yml이 있는 곳에서 `docker-compose build` 입력 후 엔터 
-![ELK-docker-compose build](https://user-images.githubusercontent.com/67114268/106850304-9bb1ad00-66f7-11eb-97b0-99f4ee078d3b.gif)
+### 1. Clone Packages
+```bash
 
+git clone https://github.com/siliconValleyTeamA/docker.git
 
-#### 2.`docker-compose up` 입력 후 엔터
-![ELK-docker-compose up](https://user-images.githubusercontent.com/67114268/106850306-9eac9d80-66f7-11eb-8c7a-c268e0ebcf32.gif)
+```
 
+### 2. `docker-compose build` where docker-compose.yml is placed
+```bash
+
+docker-compose build
+
+```
+
+### 3. `docker-compose up`
+```bash
+
+docker-compose up
+
+```
+---
 
 ## node-sass binding 관련 에러가 날 경우
 
