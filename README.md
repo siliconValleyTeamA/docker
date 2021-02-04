@@ -39,6 +39,8 @@ docker-compose build
 docker-compose up
 
 ```
+![ezgif com-gif-maker (5)](https://user-images.githubusercontent.com/49175629/106901338-f91b1d80-673a-11eb-9e72-5e47cf9dd1a7.gif)
+
 ---
 
 ## node-sass binding 관련 에러가 날 경우
