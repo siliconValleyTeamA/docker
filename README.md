@@ -48,3 +48,32 @@ docker-compose up
 3. 컨테이너에 접속 후 app폴더 아래에서 `npm uninstall node-sass` 입력 <br>
 4. `npm install node-sass@4.14.1` 입력 <br>
 5. exit로 컨테이너 나온 후 다시 `docker-compose up`하면 정상 작동
+
+---
+## 프로젝트 구조
+```bash
+|-- docker
+      |
+      |
+      |--client 
+      |  ..//(siliconValleyTeamA/client에서 clone한 폴더)
+      |
+      |--server
+      |  ..//(siliconValleyTeamA/server에서 clone한 폴더)
+      |
+      |--elasticsearch
+      |  ..// elasticsearch
+      |
+      |--kibana
+      |  ..//kibana
+      |
+      |--logstash
+      |  ..//logstash
+      |
+      |--docker-compose.yml
+      |  ..// 도커 설정파일
+      |
+      |
+ ```
+      
+
