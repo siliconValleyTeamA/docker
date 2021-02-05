@@ -19,7 +19,7 @@ Global Project Funding Service
 
 ## 🐳Quick Start 
 
-# Docker로 프로젝트 실행하기
+# Start project with docker
 
 ### 1. Clone Packages
 ```bash
@@ -37,7 +37,7 @@ git clone https://github.com/siliconValleyTeamA/docker.git
 
 ---
 
-## node-sass binding 관련 에러가 날 경우
+## About node-sass binding error
 
 1. `docker ps` 입력 후 client 컨테이너 ID 복사 <br>
 2. `docker exec -it 컨테이너ID bash` 터미널에 입력해서 컨테이너에 접속 <br>
